@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical" >
+        <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="2.0dip"
+        android:src="@drawable/fliter_line_hor" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="300.0dip"
+            android:background="@drawable/movie_main_menu"
+           >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="@string/search"
+                android:textSize="40sp" />
+            <EditText 
+                android:id="@+id/search_edit"
+                android:layout_width="650dp"
+                android:layout_height="70dp"
+                android:singleLine="true"
+                android:hint="@string/search_hint"
+                android:textSize="25sp"
+                android:textStyle="bold|italic"
+               android:textColor="#00ccff"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="100dp"
+                android:paddingLeft="20dp"
+                android:background="@drawable/search_edit_bg"
+                />
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="85dp"
+                android:layout_height="65dp"
+                android:layout_alignTop="@+id/search_edit"
+                android:layout_toRightOf="@+id/search_edit"
+				android:textSize="20sp"
+				android:background="@drawable/btn_search_selector"
+                 />
+
+        </RelativeLayout>
+
+</LinearLayout>

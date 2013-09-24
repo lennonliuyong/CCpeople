@@ -1,0 +1,180 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/people_main_bg"
+    >
+    <LinearLayout 
+            android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical"
+        >
+        <LinearLayout 
+    android:id="@+id/laytop"
+        android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:layout_weight="9"
+    android:orientation="horizontal"
+    >
+    <RelativeLayout 
+      android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:gravity="center_vertical"
+        >
+        <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/logo1" />
+        
+    </RelativeLayout>
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="3dp" 
+    android:background="@color/ver_line"
+    ></LinearLayout>
+<LinearLayout 
+    android:id="@+id/laycenter"
+        android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:layout_weight="1"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout 
+    android:id="@+id/layresult"
+        android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:layout_weight="5"
+    android:orientation="horizontal"
+    >
+           <RelativeLayout 
+  android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+            >
+             <TextView 
+                 android:id="@+id/tv_type"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="20dp"
+                 android:textColor="@color/type_result"
+                 android:textSize="20sp"
+                 android:gravity="center"
+                 android:layout_centerVertical="true"
+                 />
+              <TextView 
+                  android:layout_toRightOf="@id/tv_type"
+                 android:id="@+id/tv_totalrows"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="15dp"
+                 android:textColor="@color/type_result"
+                 android:textSize="20sp"
+                 android:gravity="center"
+                 android:layout_centerVertical="true"
+                 />
+             <Button 
+            android:id="@+id/btn_pageup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/page_up"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            android:focusable="false"
+            />
+
+             <TextView
+                 android:id="@+id/tv_menu_tishi"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentRight="true"
+                 android:layout_centerVertical="true"
+                 android:layout_marginRight="16dp"
+                 android:text="@string/menu_tishi"
+                 android:textColor="@color/white"
+                 android:textSize="25sp"
+                 android:visibility="visible" />
+
+             <ImageView
+                 android:id="@+id/menu_img"
+                 android:layout_width="35dp"
+                 android:layout_height="35dp"
+                 android:layout_marginRight="15dp"
+                 android:layout_toLeftOf="@+id/tv_menu_tishi"
+                 android:layout_centerVertical="true"
+                 android:visibility="visible"
+                 android:src="@drawable/menu_key" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout 
+    android:id="@+id/laylist"
+        android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:layout_weight="1"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:orientation="vertical"
+    >
+        <GridView
+            android:id="@+id/grid_list"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:numColumns="6"
+            android:verticalSpacing="10dp"
+            android:horizontalSpacing="10dp"
+            android:scrollbars="none" />
+    </LinearLayout>
+    <LinearLayout 
+    android:id="@+id/laypageNum"
+        android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:layout_weight="5"
+    android:orientation="horizontal"
+    >
+        <RelativeLayout 
+  android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+            >
+             <TextView 
+                 android:id="@+id/tv_currentpage"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="20dp"
+                 android:textColor="@color/current_page"
+                 android:textSize="20sp"
+                 android:gravity="center"
+                 android:layout_centerVertical="true"
+                 />
+             <Button 
+            android:id="@+id/btn_pagedown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/page_down"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+             android:focusable="false"
+            />
+        </RelativeLayout>
+       
+    </LinearLayout>
+</LinearLayout>
+     </LinearLayout>
+     <include
+        android:id="@+id/type_details_menulayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+         android:visibility="gone"
+        layout="@layout/type_details_filter"
+        />
+         <include
+        android:id="@+id/search_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+         android:visibility="gone"
+        layout="@layout/search"
+        />
+
+         
+</RelativeLayout>

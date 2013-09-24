@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="500dip"
+    android:layout_height="50.0dp" 
+     android:descendantFocusability="blocksDescendants"
+    >
+
+    <TextView
+        android:id="@+id/edu_item_esp"
+        android:layout_width="450dip"
+        android:layout_height="50.0dp"
+        android:background="@drawable/edugrid_item_selector"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:focusableInTouchMode="true"
+        android:paddingLeft="10dip"
+        android:scaleType="fitXY"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:text="内容显示等待中..."
+        android:textColor="#000033"
+        android:textSize="24dip" />
+</LinearLayout>
